@@ -3,7 +3,7 @@ export default function Home() {
     <main className="flex flex-col items-center justify-center h-screen font-sans text-gray-300 bg-zinc-900">
       <div className="flex flex-col items-center w-5/6">
         <h1 className="flex text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-blue-300">
-          Hello, I'm Julien.
+          Hello, I&apos;m Julien.
         </h1>
         <hr className="w-4/6 h-1 my-4 bg-gradient-to-r from-blue-300 to-emerald-500"></hr>
         <div className="flex flex-col items-center w-4/6">
@@ -126,7 +126,7 @@ export default function Home() {
 
         <section className="flex flex-col w-4/6 items-center space-y-4 text-center">
           <p>
-            I'm a full stack developer at
+            I&apos;m a full stack developer at
             <span className="font-bold border-2 border-transparent rounded-md hover:border-teal-200 hover:animate-pulse ml-1">
               <a
                 href="https://www.s01ve.io/"
