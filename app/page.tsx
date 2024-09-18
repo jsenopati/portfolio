@@ -146,18 +146,20 @@ export default function Home() {
               >
                 mobile app
               </a>
-            </span>
-            , and a
+            </span>{" "}
+            for business email compromise prevention, and an accompanying
             <span className="font-bold border-2 border-transparent rounded-md hover:border-teal-200 hover:animate-pulse mx-1">
               <a
-                href="https://www.authondemand.com/"
+                href="https://www.authrequest.io/"
                 target="_blank"
                 className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-emerald-500"
               >
-                website
+                SaaS webapp
               </a>
             </span>
-            powered by Next.js, with many more interesting projects to come.
+            which provides a suite of enterprise features: cyber awareness
+            training modules, email security, and phishing simulations with many
+            more interesting projects to come.
           </p>
           <p>
             I also do web dev for
@@ -172,6 +174,13 @@ export default function Home() {
             </span>
             , an e-commerce platform and community for all things AI art,
             working primarily with Next.js and TypeScript.
+          </p>
+
+          <p>
+            Throughout my time in the ITSD program at SAIT, as well as before
+            and after, I worked as a Windows and Apple technician, resolving
+            hardware and software issues for clients across a wide range of
+            devices.
           </p>
 
           <p>Right now, my interests are Go, React, and Svelte.</p>
