@@ -1,11 +1,13 @@
+import { ProjectPane } from './components/project-pane'
+
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center h-screen font-sans text-gray-300 bg-zinc-900">
-      <div className="flex flex-col items-center w-5/6">
+    <main className="flex flex-col items-center justify-center h-screen font-sans text-gray-300 bg-neutral-900">
+      <div className="flex flex-col w-5/6 bg-zinc-800 py-16 rounded-2xl items-center">
         <h1 className="flex text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-blue-300">
           Hello, I&apos;m Julien.
         </h1>
-        <hr className="w-4/6 h-1 my-4 bg-gradient-to-r from-blue-300 to-emerald-500"></hr>
+        <div className="w-4/6 h-1 my-4 bg-gradient-to-r from-blue-300 to-emerald-500" />
         <div className="flex flex-col items-center w-4/6">
           <div className="flex flex-row justify-around w-full my-4">
             <div className="">
@@ -23,8 +25,8 @@ export default function Home() {
                       x2="100%"
                       y2="0%"
                     >
-                      <stop offset="0%" style={{ stopColor: "#9333EA" }} />
-                      <stop offset="100%" style={{ stopColor: "#F9A8D4" }} />
+                      <stop offset="0%" style={{ stopColor: '#9333EA' }} />
+                      <stop offset="100%" style={{ stopColor: '#F9A8D4' }} />
                     </linearGradient>
                   </defs>
                   <path
@@ -50,8 +52,8 @@ export default function Home() {
                       x2="100%"
                       y2="0%"
                     >
-                      <stop offset="0%" style={{ stopColor: "#F9A8D4" }} />
-                      <stop offset="100%" style={{ stopColor: "#D8B4FE" }} />
+                      <stop offset="0%" style={{ stopColor: '#F9A8D4' }} />
+                      <stop offset="100%" style={{ stopColor: '#D8B4FE' }} />
                     </linearGradient>
                   </defs>
                   <path
@@ -80,8 +82,8 @@ export default function Home() {
                       x2="100%"
                       y2="0%"
                     >
-                      <stop offset="0%" style={{ stopColor: "#D8B4FE" }} />
-                      <stop offset="100%" style={{ stopColor: "#DB2777" }} />
+                      <stop offset="0%" style={{ stopColor: '#D8B4FE' }} />
+                      <stop offset="100%" style={{ stopColor: '#DB2777' }} />
                     </linearGradient>
                   </defs>
                   <path
@@ -93,38 +95,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <hr className="w-4/6 h-1 my-4 bg-gradient-to-r from-purple-300 to-pink-300"></hr>
-
-        {/* //keep for later
-        <div id="content" className="flex justify-center">
-          <button hx-get="/about" hx-target="#content" className="">
-            <svg
-              className="w-12 h-12 transition duration-300 border-2 border-transparent hover:border-teal-200 rounded-3xl hover:animate-pulse hover:scale-125"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <defs>
-                <linearGradient
-                  id="gradient5"
-                  x1="0%"
-                  y1="0%"
-                  x2="100%"
-                  y2="0%"
-                >
-                  <stop offset="0%" style={{ stopColor: "#10B981" }} />
-                  <stop offset="100%" style={{ stopColor: "#93C5FD" }} />
-                </linearGradient>
-              </defs>
-              <path
-                fill="url(#gradient5)"
-                d="M12.7071 4.29289C12.5196 4.10536 12.2652 4 12 4C11.7348 4 11.4804 4.10536 11.2929 4.29289L4.29289 11.2929C3.90237 11.6834 3.90237 12.3166 4.29289 12.7071C4.68342 13.0976 5.31658 13.0976 5.70711 12.7071L12 6.41421L18.2929 12.7071C18.6834 13.0976 19.3166 13.0976 19.7071 12.7071C20.0976 12.3166 20.0976 11.6834 19.7071 11.2929L12.7071 4.29289ZM12.7071 11.2929C12.5196 11.1054 12.2652 11 12 11C11.7348 11 11.4804 11.1054 11.2929 11.2929L4.29289 18.2929C3.90237 18.6834 3.90237 19.3166 4.29289 19.7071C4.68342 20.0976 5.31658 20.0976 5.70711 19.7071L12 13.4142L18.2929 19.7071C18.6834 19.0976 19.3166 19.0976 19.7071 19.7071C20.0976 19.3166 20.0976 18.6834 19.7071 18.2929L12.7071 11.2929Z"
-              />
-            </svg>
-          </button>
-        </div> */}
-
-        <section className="flex flex-col w-4/6 items-center space-y-4 text-center">
+        <div className="w-4/6 h-1 my-4 bg-gradient-to-r from-purple-300 to-pink-300" />
+        <section className="flex flex-col w-4/6 space-y-4">
           <p>
             I&apos;m a full stack developer at
             <span className="font-bold border-2 border-transparent rounded-md hover:border-teal-200 hover:animate-pulse ml-1">
@@ -136,8 +108,8 @@ export default function Home() {
                 s01ve Cyber Solutions
               </a>
             </span>
-            , a cybersecurity/IT service and consultation company. Some of the
-            projects I work on include a
+            , a cybersecurity/IT service company. Some of the projects I work on
+            include a
             <span className="font-bold border-2 border-transparent rounded-md hover:border-teal-200 hover:animate-pulse ml-1">
               <a
                 href="https://play.google.com/store/apps/details?id=com.s01ve.aodAuth&pcampaignid=web_share"
@@ -146,7 +118,7 @@ export default function Home() {
               >
                 mobile app
               </a>
-            </span>{" "}
+            </span>{' '}
             for business email compromise prevention, and an accompanying
             <span className="font-bold border-2 border-transparent rounded-md hover:border-teal-200 hover:animate-pulse mx-1">
               <a
@@ -158,8 +130,7 @@ export default function Home() {
               </a>
             </span>
             which provides a suite of enterprise features: cyber awareness
-            training modules, email security, and phishing simulations with many
-            more interesting projects to come.
+            training modules, email security, and phishing simulations.
           </p>
           <p>
             I also do web dev for
@@ -184,42 +155,18 @@ export default function Home() {
           </p>
 
           <p>Right now, my interests are Go, React, and Svelte.</p>
-
-          {/* <div className="mt-4">
-          <a href="/" hx-boost="true">
-
-            //keep this for later heheh
-            <svg
-              className="w-12 h-12 transition duration-300 border-2 border-transparent hover:border-teal-200 rounded-3xl hover:animate-pulse hover:scale-125"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <defs>
-                <linearGradient
-                  id="gradient5"
-                  x1="0%"
-                  y1="0%"
-                  x2="100%"
-                  y2="0%"
-                >
-                  <stop offset="0%" style={{ stopColor: "#10B981" }} />
-                  <stop offset="100%" style={{ stopColor: "#93C5FD" }} />
-                </linearGradient>
-              </defs>
-              <path
-                fill="url(#gradient5)"
-                d="M12.7071 4.29289C12.5196 4.10536 12.2652 4 12 4C11.7348 4 11.4804 4.10536 11.2929 4.29289L4.29289 11.2929C3.90237 11.6834 3.90237 12.3166 4.29289 12.7071C4.68342 13.0976 5.31658 13.0976 5.70711 12.7071L12 6.41421L18.2929 12.7071C18.6834 13.0976 19.3166 13.0976 19.7071 12.7071C20.0976 12.3166 20.0976 11.6834 19.7071 11.2929L12.7071 4.29289ZM12.7071 11.2929C12.5196 11.1054 12.2652 11 12 11C11.7348 11 11.4804 11.1054 11.2929 11.2929L4.29289 18.2929C3.90237 18.6834 3.90237 19.3166 4.29289 19.7071C4.68342 20.0976 5.31658 20.0976 5.70711 19.7071L12 13.4142L18.2929 19.7071C18.6834 19.0976 19.3166 19.0976 19.7071 19.7071C20.0976 19.3166 20.0976 18.6834 19.7071 18.2929L12.7071 11.2929Z"
-              />
-            </svg>
-          </a>
-        </div> */}
         </section>
+        <div className="w-4/6 h-1 my-4 bg-gradient-to-r from-purple-400 to-pink-400" />
+        <h2 className="flex text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-blue-300">
+          Projects
+        </h2>
+        <div className="w-4/6 h-1 my-4 bg-gradient-to-r from-pink-500 to-purple-500" />
+        <ProjectPane></ProjectPane>
       </div>
 
       <div className="fixed bottom-0 left-0 right-0 flex items-end justify-center text-xs">
         Currently under construction. 🛠️
       </div>
     </main>
-  );
+  )
 }
