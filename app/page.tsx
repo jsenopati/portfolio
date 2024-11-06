@@ -1,9 +1,10 @@
+import { DividerDropdown } from './components/divider-dropdown'
 import { ProjectPane } from './components/project-pane'
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center h-screen font-sans text-gray-300 bg-neutral-900">
-      <div className="flex flex-col w-5/6 bg-zinc-800 py-16 rounded-2xl items-center">
+    <main className="flex flex-col items-center min-h-screen font-sans text-gray-300 bg-neutral-900">
+      <div className="flex flex-col w-5/6 bg-zinc-800 py-16 rounded-2xl items-center my-16">
         <h1 className="flex text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-blue-300">
           Hello, I&apos;m Julien.
         </h1>
@@ -96,72 +97,86 @@ export default function Home() {
           </div>
         </div>
         <div className="w-4/6 h-1 my-4 bg-gradient-to-r from-purple-300 to-pink-300" />
-        <section className="flex flex-col w-4/6 space-y-4">
-          <p>
-            I&apos;m a full stack developer at
-            <span className="font-bold border-2 border-transparent rounded-md hover:border-teal-200 hover:animate-pulse ml-1">
-              <a
-                href="https://www.s01ve.io/"
-                target="_blank"
-                className="text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-purple-300"
-              >
-                s01ve Cyber Solutions
-              </a>
-            </span>
-            , a cybersecurity/IT service company. Some of the projects I work on
-            include a
-            <span className="font-bold border-2 border-transparent rounded-md hover:border-teal-200 hover:animate-pulse ml-1">
-              <a
-                href="https://play.google.com/store/apps/details?id=com.s01ve.aodAuth&pcampaignid=web_share"
-                target="_blank"
-                className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-blue-300"
-              >
-                mobile app
-              </a>
-            </span>{' '}
-            for business email compromise prevention, and an accompanying
-            <span className="font-bold border-2 border-transparent rounded-md hover:border-teal-200 hover:animate-pulse mx-1">
-              <a
-                href="https://www.authrequest.io/"
-                target="_blank"
-                className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-emerald-500"
-              >
-                SaaS webapp
-              </a>
-            </span>
-            which provides a suite of enterprise features: cyber awareness
-            training modules, email security, and phishing simulations.
-          </p>
-          <p>
-            I also do web dev for
-            <span className="font-bold border-2 border-transparent rounded-md hover:border-teal-200 hover:animate-pulse ml-1">
-              <a
-                href="https://treemansion.com/"
-                target="_blank"
-                className="text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-purple-300"
-              >
-                Treemansion.com
-              </a>
-            </span>
-            , an e-commerce platform and community for all things AI art,
-            working primarily with Next.js and TypeScript.
-          </p>
+        <DividerDropdown
+          header="About Me"
+          headerGradientFrom="from-purple-300"
+          headerGradientTo="to-pink-300"
+          expandHeight="h-90 md:h-72"
+        >
+          <section className="flex flex-col space-y-4">
+            <p>
+              I&apos;m a full stack developer at
+              <span className="font-bold border-2 border-transparent rounded-md hover:border-teal-200 hover:animate-pulse ml-1">
+                <a
+                  href="https://www.s01ve.io/"
+                  target="_blank"
+                  className="text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-purple-300"
+                >
+                  s01ve Cyber Solutions
+                </a>
+              </span>
+              , a cybersecurity/IT service company. Some of the projects I work
+              on include a
+              <span className="font-bold border-2 border-transparent rounded-md hover:border-teal-200 hover:animate-pulse ml-1">
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.s01ve.aodAuth&pcampaignid=web_share"
+                  target="_blank"
+                  className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-blue-300"
+                >
+                  mobile app
+                </a>
+              </span>{' '}
+              for business email compromise prevention, and an accompanying
+              <span className="font-bold border-2 border-transparent rounded-md hover:border-teal-200 hover:animate-pulse mx-1">
+                <a
+                  href="https://www.authrequest.io/"
+                  target="_blank"
+                  className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-emerald-500"
+                >
+                  SaaS webapp
+                </a>
+              </span>
+              which provides a suite of enterprise features: cyber awareness
+              training modules, email security, and phishing simulations.
+            </p>
+            <p>
+              I also do web dev for
+              <span className="font-bold border-2 border-transparent rounded-md hover:border-teal-200 hover:animate-pulse ml-1">
+                <a
+                  href="https://treemansion.com/"
+                  target="_blank"
+                  className="text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-purple-300"
+                >
+                  Treemansion.com
+                </a>
+              </span>
+              , an e-commerce platform and community for all things AI art,
+              working primarily with Next.js and TypeScript.
+            </p>
 
-          <p>
-            Throughout my time in the ITSD program at SAIT, as well as before
-            and after, I worked as a Windows and Apple technician, resolving
-            hardware and software issues for clients across a wide range of
-            devices.
-          </p>
+            <p>
+              Throughout my time in the ITSD program at SAIT, as well as before
+              and after, I worked as a Windows and Apple technician, resolving
+              hardware and software issues for clients across a wide range of
+              devices.
+            </p>
 
-          <p>Right now, my interests are Go, React, and Svelte.</p>
-        </section>
-        <div className="w-4/6 h-1 my-4 bg-gradient-to-r from-purple-400 to-pink-400" />
-        <h2 className="flex text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-blue-300">
-          Projects
-        </h2>
-        <div className="w-4/6 h-1 my-4 bg-gradient-to-r from-pink-500 to-purple-500" />
-        <ProjectPane></ProjectPane>
+            <p>Right now, my interests are Go, React, and Svelte.</p>
+          </section>
+        </DividerDropdown>
+
+        <DividerDropdown
+          header="Projects"
+          headerGradientFrom="from-emerald-500"
+          headerGradientTo="to-blue-300"
+          topGradientFrom="from-purple-400"
+          topGradientTo="to-pink-400"
+          bottomGradientFrom="from-pink-500"
+          bottomGradientTo="to-purple-500"
+          expandHeight="h-12"
+        >
+          <ProjectPane />
+        </DividerDropdown>
       </div>
 
       <div className="fixed bottom-0 left-0 right-0 flex items-end justify-center text-xs">
