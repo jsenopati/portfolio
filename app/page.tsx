@@ -1,3 +1,4 @@
+import { IoLogoApple, IoLogoWindows } from 'react-icons/io5'
 import { DividerDropdown } from './components/divider-dropdown'
 import { ProjectPane } from './components/project-pane'
 
@@ -5,12 +6,13 @@ export default function Home() {
   return (
     <main className="flex flex-col items-center min-h-screen font-sans text-gray-300 bg-neutral-900">
       <div className="flex flex-col w-5/6 bg-zinc-800 py-16 rounded-2xl items-center my-16">
-        <h1 className="flex text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-blue-300">
+        <h1 className="flex w-5/6 justify-center text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-blue-300">
           Hello, I&apos;m Julien.
+          <span className="text-white animate-bounce">👋</span>
         </h1>
-        <div className="w-4/6 h-1 my-4 bg-gradient-to-r from-blue-300 to-emerald-500" />
-        <div className="flex flex-col items-center w-4/6">
-          <div className="flex flex-row justify-around w-full my-4">
+        <div className="w-5/6 h-1 my-4 bg-gradient-to-r from-blue-300 to-emerald-500" />
+        <div className="flex flex-col items-center w-5/6">
+          <div className="flex flex-row w-full my-4 justify-center gap-12">
             <div className="">
               <a href="https://github.com/jsenopati" target="_blank">
                 <svg
@@ -96,16 +98,17 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="w-4/6 h-1 my-4 bg-gradient-to-r from-purple-300 to-pink-300" />
+        <div className="w-5/6 h-1 my-4 bg-gradient-to-r from-purple-300 to-pink-300" />
         <DividerDropdown
           header="About Me"
           headerGradientFrom="from-purple-300"
           headerGradientTo="to-pink-300"
-          expandHeight="h-90 md:h-72"
+          expandHeight="h-fit"
         >
           <section className="flex flex-col space-y-4">
             <p>
-              I&apos;m a full stack developer at
+              I&apos;m a full stack developer / UI designer / support specialist
+              at
               <span className="font-bold border-2 border-transparent rounded-md hover:border-teal-200 hover:animate-pulse ml-1">
                 <a
                   href="https://www.s01ve.io/"
@@ -115,29 +118,8 @@ export default function Home() {
                   s01ve Cyber Solutions
                 </a>
               </span>
-              , a cybersecurity/IT service company. Some of the projects I work
-              on include a
-              <span className="font-bold border-2 border-transparent rounded-md hover:border-teal-200 hover:animate-pulse ml-1">
-                <a
-                  href="https://play.google.com/store/apps/details?id=com.s01ve.aodAuth&pcampaignid=web_share"
-                  target="_blank"
-                  className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-blue-300"
-                >
-                  mobile app
-                </a>
-              </span>{' '}
-              for business email compromise prevention, and an accompanying
-              <span className="font-bold border-2 border-transparent rounded-md hover:border-teal-200 hover:animate-pulse mx-1">
-                <a
-                  href="https://www.authrequest.io/"
-                  target="_blank"
-                  className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-emerald-500"
-                >
-                  SaaS webapp
-                </a>
-              </span>
-              which provides a suite of enterprise features: cyber awareness
-              training modules, email security, and phishing simulations.
+              💻🔐, an MSSP company where I get to wear a lot of hats 🎩 and
+              work on a variety of projects.
             </p>
             <p>
               I also do web dev for
@@ -150,18 +132,23 @@ export default function Home() {
                   Treemansion.com
                 </a>
               </span>
-              , an e-commerce platform and community for all things AI art,
-              working primarily with Next.js and TypeScript.
+              🏠🌴, an e-commerce platform and community for all things AI art
+              🖼, working primarily with Next.js and TypeScript.
             </p>
 
             <p>
-              Throughout my time in the ITSD program at SAIT, as well as before
-              and after, I worked as a Windows and Apple technician, resolving
-              hardware and software issues for clients across a wide range of
-              devices.
+              Throughout my time in the ITSD👨‍💻 program at SAIT🏫, as well as
+              before and after, I worked as a Windows
+              <IoLogoWindows className="inline ml-0.5 mb-1" /> and Apple
+              <IoLogoApple className="inline ml-0.5 mb-1" /> technician,
+              resolving hardware and software issues for clients across a wide
+              range of devices 📱.
             </p>
 
-            <p>Right now, my interests are Go, React, and Svelte.</p>
+            <p>
+              Right now, my interests are Go, React, and honing my design skills
+              with Figma 🎨.
+            </p>
           </section>
         </DividerDropdown>
 
@@ -173,7 +160,7 @@ export default function Home() {
           topGradientTo="to-pink-400"
           bottomGradientFrom="from-pink-500"
           bottomGradientTo="to-purple-500"
-          expandHeight="h-12"
+          expandHeight="h-fit"
         >
           <ProjectPane />
         </DividerDropdown>

@@ -32,7 +32,7 @@ export const DividerDropdown = ({
     <>
       {topGradientFrom && topGradientTo && (
         <div
-          className={`w-4/6 h-1 my-4 bg-gradient-to-r ${topGradientFrom} ${topGradientTo}`}
+          className={`w-5/6 h-1 my-4 bg-gradient-to-r ${topGradientFrom} ${topGradientTo}`}
         />
       )}
       <div className="flex w-full items-center justify-center gap-4">
@@ -50,13 +50,13 @@ export const DividerDropdown = ({
       </div>
       {bottomGradientFrom && bottomGradientTo && (
         <div
-          className={`w-4/6 h-1 my-4 bg-gradient-to-r ${bottomGradientFrom} ${bottomGradientTo}`}
+          className={`w-5/6 h-1 my-4 bg-gradient-to-r ${bottomGradientFrom} ${bottomGradientTo}`}
         />
       )}
       <div
         className={`${
-          show ? `${expandHeight} my-4` : 'h-0 my-0'
-        } overflow-hidden w-4/6 transition-all duration-500`}
+          show ? `${expandHeight} my-4 opacity-100` : 'h-0 my-0 opacity-0'
+        } overflow-hidden w-5/6 transition-all duration-500`}
       >
         {children}
       </div>
