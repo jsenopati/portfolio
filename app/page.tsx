@@ -5,12 +5,12 @@ export default function Home() {
   return (
     <main className="flex flex-col items-center min-h-screen font-sans text-gray-300 bg-neutral-900">
       <div className="flex flex-col w-5/6 bg-zinc-800 py-16 rounded-2xl items-center my-16">
-        <h1 className="flex text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-blue-300">
+        <h1 className="flex w-5/6 justify-center text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-blue-300">
           Hello, I&apos;m Julien.
         </h1>
-        <div className="w-4/6 h-1 my-4 bg-gradient-to-r from-blue-300 to-emerald-500" />
-        <div className="flex flex-col items-center w-4/6">
-          <div className="flex flex-row justify-around w-full my-4">
+        <div className="w-5/6 h-1 my-4 bg-gradient-to-r from-blue-300 to-emerald-500" />
+        <div className="flex flex-col items-center w-5/6">
+          <div className="flex flex-row w-full my-4 justify-center gap-12">
             <div className="">
               <a href="https://github.com/jsenopati" target="_blank">
                 <svg
@@ -96,12 +96,12 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="w-4/6 h-1 my-4 bg-gradient-to-r from-purple-300 to-pink-300" />
+        <div className="w-5/6 h-1 my-4 bg-gradient-to-r from-purple-300 to-pink-300" />
         <DividerDropdown
           header="About Me"
           headerGradientFrom="from-purple-300"
           headerGradientTo="to-pink-300"
-          expandHeight="h-90 md:h-72"
+          expandHeight="h-fit"
         >
           <section className="flex flex-col space-y-4">
             <p>
@@ -115,29 +115,7 @@ export default function Home() {
                   s01ve Cyber Solutions
                 </a>
               </span>
-              , a cybersecurity/IT service company. Some of the projects I work
-              on include a
-              <span className="font-bold border-2 border-transparent rounded-md hover:border-teal-200 hover:animate-pulse ml-1">
-                <a
-                  href="https://play.google.com/store/apps/details?id=com.s01ve.aodAuth&pcampaignid=web_share"
-                  target="_blank"
-                  className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-blue-300"
-                >
-                  mobile app
-                </a>
-              </span>{' '}
-              for business email compromise prevention, and an accompanying
-              <span className="font-bold border-2 border-transparent rounded-md hover:border-teal-200 hover:animate-pulse mx-1">
-                <a
-                  href="https://www.authrequest.io/"
-                  target="_blank"
-                  className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-emerald-500"
-                >
-                  SaaS webapp
-                </a>
-              </span>
-              which provides a suite of enterprise features: cyber awareness
-              training modules, email security, and phishing simulations.
+              , a cybersecurity/IT service company.
             </p>
             <p>
               I also do web dev for
@@ -161,7 +139,10 @@ export default function Home() {
               devices.
             </p>
 
-            <p>Right now, my interests are Go, React, and Svelte.</p>
+            <p>
+              Right now, my interests are Go, React, and honing my design skills
+              with Figma.
+            </p>
           </section>
         </DividerDropdown>
 
@@ -173,7 +154,7 @@ export default function Home() {
           topGradientTo="to-pink-400"
           bottomGradientFrom="from-pink-500"
           bottomGradientTo="to-purple-500"
-          expandHeight="h-12"
+          expandHeight="h-fit"
         >
           <ProjectPane />
         </DividerDropdown>
