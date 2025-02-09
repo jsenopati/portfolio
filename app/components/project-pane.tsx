@@ -16,7 +16,7 @@ export const ProjectPane = (props: Props) => {
       <DoublePane
         header="ReTrain Canada"
         headerTextSize="text-xl sm:text-3xl lg:text-4xl"
-        description="The original ReTrain Canada website was built in WordPress, and was a bit outdated. I spearheaded redesigning and redeveloping the site to modernize and improve the user experience, which immediadly resulted in a massive +400% increase in client intake."
+        description="The original ReTrain Canada website was built in WordPress, and was a bit outdated. I spearheaded redesigning and redeveloping the site to modernize and improve the user experience, which immediately resulted in a massive increase in traffic and client intake. The design phases were done in Figma, with full prototyping and iteration. I had a huge focus on new client user experience, so this project features a custom built in-depth intake process."
         descTextWeight="font-bold"
         headerTextColor="text-emerald-300"
         descTextColor="text-gray-200"
@@ -39,7 +39,7 @@ export const ProjectPane = (props: Props) => {
         side="right"
         header="AuthRequest Mobile App"
         headerTextSize="text-xl sm:text-3xl lg:text-4xl"
-        description="authrequest app text here"
+        description="The AuthRequest mobile app is a cutting edge 2FA security app that allows users to securely prevent business email compromise. As the first major mobile app project I contributed to during my internship at s01ve, I credit it with skyrocketing my full-stack skills."
         descTextWeight="font-bold"
         headerTextColor="text-emerald-300"
         descTextColor="text-gray-200"
@@ -50,7 +50,7 @@ export const ProjectPane = (props: Props) => {
             rel="noreferrer"
           >
             <Image
-              className="object-contain rounded-tr-3xl rounded-bl-3xl h-[30rem]"
+              className="object-contain rounded-tr-3xl rounded-bl-3xl h-[30rem] w-fit"
               src={areqapp}
               placeholder="blur"
               alt="authrequest screenshot"
@@ -66,7 +66,7 @@ export const ProjectPane = (props: Props) => {
         side="left"
         header="s01ve Scan"
         headerTextSize="text-xl sm:text-3xl lg:text-4xl"
-        description="solve scan text here"
+        description="Bult around RESTful APIs and Google Cloud, the s01ve Scan was the first project I worked on where I had to truly expand my backend skills. This project analyzes domains and emails and aggregates the results into beautiful PDF reports."
         descTextWeight="font-bold"
         headerTextColor="text-emerald-300"
         descTextColor="text-gray-200"
@@ -89,7 +89,7 @@ export const ProjectPane = (props: Props) => {
         side="right"
         header="AuthRequest"
         headerTextSize="text-xl sm:text-3xl lg:text-4xl"
-        description="authrequest text here"
+        description="The AuthRequest webapp has a ton of awesome features once you're logged in with an enterprise account - phishing simulations, cybersecurity training modules, and more. I contributed full-stack to this project, with a big focus on user experience and continuous iteration."
         descTextWeight="font-bold"
         headerTextColor="text-emerald-300"
         descTextColor="text-gray-200"
@@ -111,7 +111,7 @@ export const ProjectPane = (props: Props) => {
       <DoublePane
         header="ReTrain Academics"
         headerTextSize="text-xl sm:text-3xl lg:text-4xl"
-        description="talk about whitelabel here"
+        description="Fully featured Learning Management System (LMS) with fully hotswappable enterprise whitelabel / branding based on subdomain. I spearheaded the design, UI / UX, and frontend development of this project."
         descTextWeight="font-bold"
         headerTextColor="text-emerald-300"
         descTextColor="text-gray-200"
@@ -138,7 +138,7 @@ export const ProjectPane = (props: Props) => {
         side="right"
         header="s01ve Cyber Solutions"
         headerTextSize="text-xl sm:text-3xl lg:text-4xl"
-        description="talk about site here"
+        description="Rebuilding and modernizing the s01ve Cyber Solutions using Next.js and TypeScript allowed me to explore concepts such as server-side rendering, CMS integration, and more. It fully integrates with the s01ve Scan API and provides a seamless user experience."
         descTextWeight="font-bold"
         headerTextColor="text-emerald-300"
         descTextColor="text-gray-200"
@@ -160,7 +160,7 @@ export const ProjectPane = (props: Props) => {
       <DoublePane
         header="Roster Staffing"
         headerTextSize="text-xl sm:text-3xl lg:text-4xl"
-        description="talk about site here"
+        description="Though it's a simple site, the Roster Staffing page was a huge learning experience for me: I led the meetings with the client to capture requirements and feedback, then directed design and development of the project."
         descTextWeight="font-bold"
         headerTextColor="text-emerald-300"
         descTextColor="text-gray-200"
@@ -174,7 +174,7 @@ export const ProjectPane = (props: Props) => {
             />
           </a>
         }
-        tagText="Next.js, TypeScript, Firebase, Figma"
+        tagText="Next.js, TypeScript, Resend, Figma"
         margin=""
         padding="py-10"
         textContentPadding="pb-6 md:pb-0"
