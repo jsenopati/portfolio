@@ -57,7 +57,7 @@ export const ProjectPane = (props: Props) => {
             />
           </a>
         }
-        tagText="Expo, React Native, TypeScript"
+        tagText="Expo, React Native, TypeScript, Postmark"
         margin=""
         padding="py-10"
         textContentPadding="pb-6 md:pb-0"
@@ -66,7 +66,7 @@ export const ProjectPane = (props: Props) => {
         side="left"
         header="s01ve Scan"
         headerTextSize="text-xl sm:text-3xl lg:text-4xl"
-        description="Bult around RESTful APIs and Google Cloud, the s01ve Scan was the first project I worked on where I had to truly expand my backend skills. This project analyzes domains and emails and aggregates the results into beautiful PDF reports."
+        description="Built around RESTful APIs and Google Cloud, the s01ve Scan was the first project I worked on where I had to truly expand my backend skills. This project analyzes domains and emails and aggregates the results into beautiful PDF reports."
         descTextWeight="font-bold"
         headerTextColor="text-emerald-300"
         descTextColor="text-gray-200"
@@ -103,7 +103,7 @@ export const ProjectPane = (props: Props) => {
             />
           </a>
         }
-        tagText="Next.js, TypeScript, Firebase, Figma"
+        tagText="Next.js, TypeScript, Firebase, Figma, Postmark"
         margin=""
         padding="py-10"
         textContentPadding="pb-6 md:pb-0"
@@ -152,7 +152,7 @@ export const ProjectPane = (props: Props) => {
             />
           </a>
         }
-        tagText="Next.js, TypeScript, Firebase, Figma"
+        tagText="Next.js, TypeScript, Firebase, Figma, HubSpot"
         margin=""
         padding="py-10"
         textContentPadding="pb-6 md:pb-0"
