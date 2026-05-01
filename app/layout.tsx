@@ -1,11 +1,6 @@
 import type { Metadata } from 'next'
-import { Jost } from 'next/font/google'
+import '7.css/dist/7.scoped.css'
 import './globals.css'
-
-const jost = Jost({
-  subsets: ['latin'],
-  display: 'swap',
-})
 
 export const metadata: Metadata = {
   title: 'Julien Senopati',
@@ -18,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={jost.className}>
+    <html lang="en">
       <body>{children}</body>
     </html>
   )
