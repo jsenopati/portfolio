@@ -1,1 +1,43 @@
 @import "tailwindcss";
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.desktop {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    180deg,
+    #1a6aa8 0%,
+    #3a9bd5 30%,
+    #5cb8e8 55%,
+    #a8d8f0 75%,
+    #c8e8f8 100%
+  );
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.desktop-area {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+}
+
+.desktop-area::-webkit-scrollbar {
+  width: 16px;
+}
+.desktop-area::-webkit-scrollbar-track {
+  background: #c8e8f8;
+}
+.desktop-area::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #5cb8e8, #1a6aa8);
+  border: 1px solid #0a4a88;
+}
