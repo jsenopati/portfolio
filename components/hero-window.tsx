@@ -1,14 +1,8 @@
+import { Win7Window } from './win7-window'
+
 export const HeroWindow = () => {
   return (
-    <div className="window" style={{ width: '100%', marginBottom: '16px' }}>
-      <div className="title-bar">
-        <div className="title-bar-text">Julien Senopati — Portfolio</div>
-        <div className="title-bar-controls">
-          <button aria-label="Minimize" />
-          <button aria-label="Maximize" />
-          <button aria-label="Close" />
-        </div>
-      </div>
+    <Win7Window title="Julien Senopati — Portfolio" defaultWidth="100%">
       <div className="window-body has-space">
         <div className="flex flex-col items-center gap-4 py-4">
           <h1 className="flex items-center gap-2 bg-linear-to-r from-emerald-500 to-blue-300 bg-clip-text text-4xl font-bold text-transparent">
@@ -105,6 +99,6 @@ export const HeroWindow = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Win7Window>
   )
 }
