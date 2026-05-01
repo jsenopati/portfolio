@@ -33,45 +33,36 @@ export const Taskbar = () => {
     <div
       style={{
         height: '40px',
-        background:
-          'linear-gradient(180deg, #4a9fd4 0%, #1a6aa8 40%, #0d4f8a 100%)',
-        borderTop: '1px solid #0a3a6a',
+        background: 'rgba(30, 90, 160, 0.55)',
+        backdropFilter: 'blur(12px)',
+        WebkitBackdropFilter: 'blur(12px)',
+        borderTop: '1px solid rgba(255,255,255,0.25)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
         padding: '0 4px',
         flexShrink: 0,
-        boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.3)',
+        boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.2)',
       }}
     >
       {/* Start button */}
       <button
         style={{
-          height: '34px',
-          padding: '0 16px 0 12px',
-          background:
-            'linear-gradient(180deg, #5cb85c 0%, #3a8a3a 50%, #2d6b2d 100%)',
-          border: '1px solid #1a4a1a',
-          borderRadius: '0 14px 14px 0',
-          color: 'white',
-          fontWeight: 'bold',
-          fontSize: '13px',
+          height: '36px',
+          padding: 0,
+          background: 'none',
+          border: 'none',
           cursor: 'pointer',
-          boxShadow:
-            'inset 0 1px 0 rgba(255,255,255,0.4), 0 1px 2px rgba(0,0,0,0.4)',
           display: 'flex',
           alignItems: 'center',
-          gap: '6px',
-          letterSpacing: '0.5px',
-          textShadow: '0 1px 1px rgba(0,0,0,0.5)',
         }}
       >
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-          <circle cx="8" cy="8" r="7" fill="white" opacity="0.9" />
-          <circle cx="8" cy="8" r="5" fill="#3a8a3a" />
-          <path d="M8 3 L8 13 M3 8 L13 8" stroke="white" strokeWidth="1.5" />
-        </svg>
-        Start
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/start.png"
+          alt="Start"
+          style={{ height: '36px', width: 'auto' }}
+        />
       </button>
 
       {/* Clock */}
@@ -79,8 +70,8 @@ export const Taskbar = () => {
         style={{
           height: '34px',
           padding: '0 10px',
-          background: 'rgba(0,0,0,0.2)',
-          border: '1px solid rgba(255,255,255,0.1)',
+          background: 'rgba(255,255,255,0.1)',
+          border: '1px solid rgba(255,255,255,0.15)',
           borderRadius: '2px',
           color: 'white',
           fontSize: '12px',
@@ -89,7 +80,7 @@ export const Taskbar = () => {
           alignItems: 'center',
           justifyContent: 'center',
           lineHeight: 1.3,
-          textShadow: '0 1px 1px rgba(0,0,0,0.5)',
+          textShadow: '0 1px 1px rgba(0,0,0,0.4)',
           minWidth: '72px',
         }}
       >
