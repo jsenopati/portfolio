@@ -7,8 +7,8 @@ export default function Home() {
     <div className="win7">
       <div className="desktop">
         <div className="desktop-area">
-          <HeroWindow defaultX={40} defaultY={30} />
-          <AboutWindow defaultX={80} defaultY={60} />
+          <HeroWindow defaultX={20} defaultY={20} />
+          <AboutWindow defaultX={440} defaultY={20} />
         </div>
         <Taskbar />
       </div>
