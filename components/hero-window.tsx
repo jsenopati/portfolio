@@ -1,9 +1,23 @@
 import { Win7Window } from './win7-window'
 
-export const HeroWindow = () => {
+type HeroWindowProps = {
+  defaultX?: number
+  defaultY?: number
+}
+
+export const HeroWindow = ({ defaultX, defaultY }: HeroWindowProps) => {
   return (
-    <Win7Window title="Julien Senopati — Portfolio" defaultWidth="100%">
-      <div className="window-body has-space">
+    <Win7Window
+      title="Julien Senopati — Portfolio"
+      defaultWidth={520}
+      defaultHeight={220}
+      defaultX={defaultX}
+      defaultY={defaultY}
+    >
+      <div
+        className="window-body has-space"
+        style={{ height: '100%', boxSizing: 'border-box' }}
+      >
         <div className="flex flex-col items-center gap-4 py-4">
           <h1 className="flex items-center gap-2 bg-linear-to-r from-emerald-500 to-blue-300 bg-clip-text text-4xl font-bold text-transparent">
             Hello, I&apos;m Julien.

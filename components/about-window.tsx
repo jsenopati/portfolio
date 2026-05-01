@@ -1,10 +1,24 @@
 import { IoLogoApple, IoLogoWindows } from 'react-icons/io5'
 import { Win7Window } from './win7-window'
 
-export const AboutWindow = () => {
+type AboutWindowProps = {
+  defaultX?: number
+  defaultY?: number
+}
+
+export const AboutWindow = ({ defaultX, defaultY }: AboutWindowProps) => {
   return (
-    <Win7Window title="About Me" defaultWidth="100%">
-      <div className="window-body has-space">
+    <Win7Window
+      title="About Me"
+      defaultWidth={520}
+      defaultHeight={280}
+      defaultX={defaultX}
+      defaultY={defaultY}
+    >
+      <div
+        className="window-body has-space"
+        style={{ height: '100%', boxSizing: 'border-box' }}
+      >
         <div className="flex flex-col gap-3 pt-3">
           <p>
             I&apos;m a full stack developer / UI designer / support specialist

@@ -6,30 +6,41 @@ import { useRef, type ReactNode } from 'react'
 type Win7WindowProps = {
   title: string
   children: ReactNode
-  defaultWidth?: number | string
-  minWidth?: number
+  defaultWidth?: number
+  defaultHeight?: number
+  defaultX?: number
+  defaultY?: number
 }
 
 export const Win7Window = ({
   title,
   children,
-  defaultWidth = 600,
-  minWidth = 280,
+  defaultWidth = 480,
+  defaultHeight = 300,
+  defaultX = 20,
+  defaultY = 20,
 }: Win7WindowProps) => {
   const nodeRef = useRef<HTMLDivElement>(null)
 
   return (
-    <Draggable handle=".title-bar" nodeRef={nodeRef as React.RefObject<HTMLElement>}>
+    <Draggable
+      handle=".title-bar"
+      nodeRef={nodeRef as React.RefObject<HTMLElement>}
+      bounds="parent"
+      defaultPosition={{ x: defaultX, y: defaultY }}
+    >
       <div
         ref={nodeRef}
         className="window"
         style={{
           width: defaultWidth,
-          minWidth,
+          height: defaultHeight,
+          minWidth: 'min-content',
+          minHeight: 'min-content',
           resize: 'both',
           overflow: 'hidden',
-          marginBottom: '16px',
           display: 'inline-block',
+          position: 'absolute',
         }}
       >
         <div className="title-bar" style={{ cursor: 'grab' }}>
@@ -40,7 +51,14 @@ export const Win7Window = ({
             <button aria-label="Close" />
           </div>
         </div>
-        <div style={{ overflow: 'auto', height: 'calc(100% - 33px)' }}>
+        <div
+          style={{
+            overflow: 'auto',
+            height: 'calc(100% - 33px)',
+            display: 'flex',
+            flexDirection: 'column',
+          }}
+        >
           {children}
         </div>
       </div>
