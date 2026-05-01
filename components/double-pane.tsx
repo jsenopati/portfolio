@@ -1,18 +1,16 @@
 import { ReactNode } from 'react'
-import Image from 'next/image'
 import { Button } from './button'
 import { IoLayers } from 'react-icons/io5'
 
 type DoublePaneProps = {
   header: string
+  header2?: string
   side?: 'left' | 'right'
   description?: string | ReactNode
   description2?: string
-  imageSrc?: any
-  content?: ReactNode
+  children: ReactNode
   padding?: string
   margin?: string
-  defaultSizes?: 'lg' | 'xl'
   extraTextContent?: ReactNode
   textContentYSpacing?: string
   textContentPadding?: string
@@ -35,13 +33,12 @@ type DoublePaneProps = {
 export const DoublePane = ({
   side = 'left',
   header,
+  header2,
   description,
   description2,
-  imageSrc,
-  content,
+  children,
   padding = 'py-20',
   margin = 'my-4 md:my-16',
-  defaultSizes,
   extraTextContent,
   textContentYSpacing = 'space-y-4',
   textContentPadding = 'md:pr-4',
@@ -62,25 +59,17 @@ export const DoublePane = ({
 }: DoublePaneProps) => {
   const flexDirection = side === 'left' ? 'md:flex-row' : 'md:flex-row-reverse'
 
-  if (defaultSizes === 'lg') {
-    headerTextSize = 'text-4xl md:text-3xl xl:text-4xl 2xl:text-5xl'
-    descTextSize = 'text-xl md:text-lg 2xl:text-xl !leading-relaxed'
-  }
-  if (defaultSizes === 'xl') {
-    headerTextSize = 'text-5xl md:text-4xl xl:text-5xl 2xl:text-6xl'
-    descTextSize = 'text-xl md:text-xl 2xl:text-2xl !leading-loose'
-  }
   return (
     <section
-      className={`flex flex-col ${flexDirection} items-center w-full h-full ${padding} md:gap-20 `}
+      className={`flex flex-col ${flexDirection} h-full w-full items-center ${padding} md:gap-20`}
     >
       <div
-        className={`flex flex-col w-full h-fit ${textContentWidth} text-pretty ${textContentYSpacing} ${margin} ${textContentPadding}`}
+        className={`flex h-fit w-full flex-col ${textContentWidth} text-pretty ${textContentYSpacing} ${margin} ${textContentPadding}`}
       >
         {tagText && (
-          <div className="flex justify-center items-center h-fit w-fit px-3 py-1 border-2 border-gray rounded-xl font-bold">
-            <IoLayers className="text-teal-300 text-3xl ml-[-4px]" />
-            <h3 className="text-purple-300 ml-2">{tagText}</h3>
+          <div className="border-gray flex h-fit w-fit items-center justify-center rounded-xl border-2 px-3 py-1 font-bold">
+            <IoLayers className="ml-[-4px] text-3xl text-teal-300" />
+            <h3 className="ml-2 text-purple-300">{tagText}</h3>
           </div>
         )}
         <h2
@@ -113,10 +102,9 @@ export const DoublePane = ({
         )}
       </div>
       <div
-        className={`flex items-center justify-center w-full h-full ${imageContentWidth} ${margin} relative`}
+        className={`flex h-full w-full items-center justify-center ${imageContentWidth} ${margin} relative`}
       >
-        {content && content}
-        {imageSrc && <Image src={imageSrc} alt="" className="w-full h-full" />}
+        {children}
       </div>
     </section>
   )

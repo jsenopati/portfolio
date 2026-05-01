@@ -1,22 +1,22 @@
 import { IoLogoApple, IoLogoWindows } from 'react-icons/io5'
-import { DividerDropdown } from './components/divider-dropdown'
-import { ProjectPane } from './components/project-pane'
+import { DividerDropdown } from '../components/divider-dropdown'
+import { ProjectSection } from '../components/project-section'
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center min-h-screen font-sans text-gray-300 bg-neutral-900">
-      <div className="flex flex-col w-5/6 bg-zinc-800 py-16 rounded-2xl items-center my-16">
-        <h1 className="flex w-5/6 justify-center text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-blue-300">
+    <main className="flex min-h-screen flex-col items-center bg-neutral-900 text-gray-300">
+      <div className="my-16 flex w-5/6 flex-col items-center rounded-2xl bg-zinc-800 py-16">
+        <h1 className="flex w-5/6 justify-center bg-gradient-to-r from-emerald-500 to-blue-300 bg-clip-text text-4xl font-bold text-transparent">
           Hello, I&apos;m Julien.
-          <span className="text-white animate-bounce">👋</span>
+          <span className="animate-bounce text-white">👋</span>
         </h1>
-        <div className="w-5/6 h-1 my-4 bg-gradient-to-r from-blue-300 to-emerald-500" />
-        <div className="flex flex-col items-center w-5/6">
-          <div className="flex flex-row w-full my-4 justify-center gap-12">
+        <div className="my-4 h-1 w-5/6 bg-gradient-to-r from-blue-300 to-emerald-500" />
+        <div className="flex w-5/6 flex-col items-center">
+          <div className="my-4 flex w-full flex-row justify-center gap-12">
             <div className="">
               <a href="https://github.com/jsenopati" target="_blank">
                 <svg
-                  className="w-12 h-12 transition duration-300 border-2 border-transparent hover:border-teal-200 rounded-3xl hover:animate-pulse hover:scale-125"
+                  className="h-12 w-12 rounded-3xl border-2 border-transparent transition duration-300 hover:scale-125 hover:animate-pulse hover:border-teal-200"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                 >
@@ -43,7 +43,7 @@ export default function Home() {
             <div className="">
               <a href="mailto:jasenopati@gmail.com">
                 <svg
-                  className="w-12 h-12 transition duration-300 border-2 border-transparent hover:border-teal-200 rounded-3xl hover:animate-pulse hover:scale-125"
+                  className="h-12 w-12 rounded-3xl border-2 border-transparent transition duration-300 hover:scale-125 hover:animate-pulse hover:border-teal-200"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
                 >
@@ -73,7 +73,7 @@ export default function Home() {
                 target="_blank"
               >
                 <svg
-                  className="w-12 h-12 transition duration-300 border-2 border-transparent hover:border-teal-200 rounded-3xl hover:animate-pulse hover:scale-125"
+                  className="h-12 w-12 rounded-3xl border-2 border-transparent transition duration-300 hover:scale-125 hover:animate-pulse hover:border-teal-200"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                 >
@@ -98,40 +98,37 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="w-5/6 h-1 my-4 bg-gradient-to-r from-purple-300 to-pink-300" />
+        <div className="my-4 h-1 w-5/6 bg-gradient-to-r from-purple-300 to-pink-300" />
         <DividerDropdown
+          showDefault={true}
           header="About Me"
           headerGradientFrom="from-purple-300"
           headerGradientTo="to-pink-300"
           expandHeight="h-fit"
         >
-          <section className="flex flex-col space-y-4">
+          <section className="flex flex-col gap-4">
             <p>
               I&apos;m a full stack developer / UI designer / support specialist
-              at
-              <span className="font-bold border-2 border-transparent rounded-md hover:border-teal-200 hover:animate-pulse ml-1">
-                <a
-                  href="https://www.s01ve.io/"
-                  target="_blank"
-                  className="text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-purple-300"
-                >
-                  s01ve Cyber Solutions
-                </a>
-              </span>
+              at{' '}
+              <a
+                href="https://www.s01ve.io/"
+                target="_blank"
+                className="rounded-md bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text font-bold text-transparent ring-0 ring-teal-200 transition-all hover:animate-pulse hover:ring-2"
+              >
+                s01ve Cyber Solutions
+              </a>{' '}
               💻🔐, an MSSP company where I get to wear a lot of hats 🎩 and
               work on a variety of projects.
             </p>
             <p>
-              I also do web dev for
-              <span className="font-bold border-2 border-transparent rounded-md hover:border-teal-200 hover:animate-pulse ml-1">
-                <a
-                  href="https://treemansion.com/"
-                  target="_blank"
-                  className="text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-purple-300"
-                >
-                  Treemansion.com
-                </a>
-              </span>
+              I also do web dev for{' '}
+              <a
+                href="https://treemansion.com/"
+                target="_blank"
+                className="rounded-md bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text font-bold text-transparent ring-0 ring-teal-200 transition-all hover:animate-pulse hover:ring-2"
+              >
+                Treemansion.com
+              </a>{' '}
               🏠🌴, an e-commerce platform and community for all things AI art
               🖼, working primarily with Next.js and TypeScript.
             </p>
@@ -139,8 +136,8 @@ export default function Home() {
             <p>
               Throughout my time in the ITSD👨‍💻 program at SAIT🏫, as well as
               before and after, I worked as a Windows
-              <IoLogoWindows className="inline ml-0.5 mb-1" /> and Apple
-              <IoLogoApple className="inline ml-0.5 mb-1" /> technician,
+              <IoLogoWindows className="mb-1 ml-0.5 inline" /> and Apple
+              <IoLogoApple className="mb-1 ml-0.5 inline" /> technician,
               resolving hardware and software issues for clients across a wide
               range of devices 📱.
             </p>
@@ -162,12 +159,8 @@ export default function Home() {
           bottomGradientTo="to-purple-500"
           expandHeight="h-fit"
         >
-          <ProjectPane />
+          <ProjectSection />
         </DividerDropdown>
-      </div>
-
-      <div className="fixed bottom-0 left-0 right-0 flex items-end justify-center text-xs">
-        Currently under construction. 🛠️
       </div>
     </main>
   )

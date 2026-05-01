@@ -7,12 +7,21 @@ import academics from '../../public/academics.png'
 import solve from '../../public/s01ve.png'
 import scan from '../../public/scan.png'
 import roster from '../../public/roster.png'
+import bulltrout from '../../public/bulltrout.png'
+import { ProjectsDoublePane } from './projects-double-pane'
 
-type Props = {}
-
-export const ProjectPane = (props: Props) => {
+export const ProjectSection = () => {
   return (
-    <section className="w-full h-fit ">
+    <>
+      <ProjectsDoublePane
+        side="left"
+        h2="Bulltrout"
+        stack="Next.js, TypeScript, Postmark, DaisyUI, Google Cloud Tasks, Firebase"
+        h3="Bulltrout"
+        desc="Bulltrout is a phishing simulation & e-learning platform with light LMS features. Currently supporting 1000+ users across multiple MSP clients, Bulltrout is likely my best work thus far. I played in integral role in its development, leading frontend development and design, overall system architecture, and more."
+        imgSrc={bulltrout}
+        imgHref="https://bulltrout.co"
+      />
       <DoublePane
         header="ReTrain Canada"
         headerTextSize="text-xl sm:text-3xl lg:text-4xl"
@@ -20,21 +29,20 @@ export const ProjectPane = (props: Props) => {
         descTextWeight="font-bold"
         headerTextColor="text-emerald-300"
         descTextColor="text-gray-200"
-        content={
-          <a href="https://retraincanada.com/" target="_blank" rel="noreferrer">
-            <Image
-              className="object-cover rounded-tl-3xl rounded-br-3xl sm:min-h-[20rem]"
-              src={retrain}
-              placeholder="blur"
-              alt="retrain screenshot"
-            />
-          </a>
-        }
         tagText="Next.js, TypeScript, Firebase, Figma"
         margin=""
         padding="py-10"
         textContentPadding="pb-6 md:pb-0"
-      />
+      >
+        <a href="https://retraincanada.com/" target="_blank" rel="noreferrer">
+          <Image
+            className="rounded-br-3xl rounded-tl-3xl object-cover sm:min-h-[20rem]"
+            src={retrain}
+            placeholder="blur"
+            alt="retrain screenshot"
+          />
+        </a>
+      </DoublePane>
       <DoublePane
         side="right"
         header="AuthRequest Mobile App"
@@ -43,25 +51,24 @@ export const ProjectPane = (props: Props) => {
         descTextWeight="font-bold"
         headerTextColor="text-emerald-300"
         descTextColor="text-gray-200"
-        content={
-          <a
-            href="https://play.google.com/store/apps/details?id=com.s01ve.aodAuth"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Image
-              className="object-contain rounded-tr-3xl rounded-bl-3xl h-[30rem] w-fit"
-              src={areqapp}
-              placeholder="blur"
-              alt="authrequest screenshot"
-            />
-          </a>
-        }
         tagText="Expo, React Native, TypeScript, Postmark"
         margin=""
         padding="py-10"
         textContentPadding="pb-6 md:pb-0"
-      />
+      >
+        <a
+          href="https://play.google.com/store/apps/details?id=com.s01ve.aodAuth"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Image
+            className="h-[30rem] w-fit rounded-bl-3xl rounded-tr-3xl object-contain"
+            src={areqapp}
+            placeholder="blur"
+            alt="authrequest screenshot"
+          />
+        </a>
+      </DoublePane>
       <DoublePane
         side="left"
         header="s01ve Scan"
@@ -70,21 +77,20 @@ export const ProjectPane = (props: Props) => {
         descTextWeight="font-bold"
         headerTextColor="text-emerald-300"
         descTextColor="text-gray-200"
-        content={
-          <a href="https://www.s01ve.io/scan" target="_blank" rel="noreferrer">
-            <Image
-              className="object-cover rounded-tr-3xl rounded-bl-3xl sm:min-h-[20rem]"
-              src={scan}
-              placeholder="blur"
-              alt="authrequest screenshot"
-            />
-          </a>
-        }
         tagText="TypeScript, RESTful API, Google Cloud, Cloud Functions"
         margin=""
         padding="py-10"
         textContentPadding="pb-6 md:pb-0"
-      />
+      >
+        <a href="https://www.s01ve.io/scan" target="_blank" rel="noreferrer">
+          <Image
+            className="rounded-bl-3xl rounded-tr-3xl object-cover sm:min-h-[20rem]"
+            src={scan}
+            placeholder="blur"
+            alt="authrequest screenshot"
+          />
+        </a>
+      </DoublePane>
       <DoublePane
         side="right"
         header="AuthRequest"
@@ -93,21 +99,20 @@ export const ProjectPane = (props: Props) => {
         descTextWeight="font-bold"
         headerTextColor="text-emerald-300"
         descTextColor="text-gray-200"
-        content={
-          <a href="https://authrequest.io/" target="_blank" rel="noreferrer">
-            <Image
-              className="object-cover rounded-tr-3xl rounded-bl-3xl sm:min-h-[20rem]"
-              src={authrequest}
-              placeholder="blur"
-              alt="authrequest screenshot"
-            />
-          </a>
-        }
         tagText="Next.js, TypeScript, Firebase, Figma, Postmark"
         margin=""
         padding="py-10"
         textContentPadding="pb-6 md:pb-0"
-      />
+      >
+        <a href="https://authrequest.io/" target="_blank" rel="noreferrer">
+          <Image
+            className="rounded-bl-3xl rounded-tr-3xl object-cover sm:min-h-[20rem]"
+            src={authrequest}
+            placeholder="blur"
+            alt="authrequest screenshot"
+          />
+        </a>
+      </DoublePane>
       <DoublePane
         header="ReTrain Academics"
         headerTextSize="text-xl sm:text-3xl lg:text-4xl"
@@ -115,25 +120,24 @@ export const ProjectPane = (props: Props) => {
         descTextWeight="font-bold"
         headerTextColor="text-emerald-300"
         descTextColor="text-gray-200"
-        content={
-          <a
-            href="https://retrainacademics.com/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Image
-              className="object-cover rounded-tl-3xl rounded-br-3xl sm:min-h-[20rem]"
-              src={academics}
-              placeholder="blur"
-              alt="retrain academics screenshot"
-            />
-          </a>
-        }
         tagText="Next.js, TypeScript, Firebase, Figma"
         margin=""
         padding="py-10"
         textContentPadding="pb-6 md:pb-0"
-      />
+      >
+        <a
+          href="https://retrainacademics.com/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Image
+            className="rounded-br-3xl rounded-tl-3xl object-cover sm:min-h-[20rem]"
+            src={academics}
+            placeholder="blur"
+            alt="retrain academics screenshot"
+          />
+        </a>
+      </DoublePane>
       <DoublePane
         side="right"
         header="s01ve Cyber Solutions"
@@ -142,21 +146,20 @@ export const ProjectPane = (props: Props) => {
         descTextWeight="font-bold"
         headerTextColor="text-emerald-300"
         descTextColor="text-gray-200"
-        content={
-          <a href="https://s01ve.io/" target="_blank" rel="noreferrer">
-            <Image
-              className="object-cover rounded-tl-3xl rounded-br-3xl sm:min-h-[20rem]"
-              src={solve}
-              placeholder="blur"
-              alt="solve screenshot"
-            />
-          </a>
-        }
         tagText="Next.js, TypeScript, Firebase, Figma, HubSpot"
         margin=""
         padding="py-10"
         textContentPadding="pb-6 md:pb-0"
-      />
+      >
+        <a href="https://s01ve.io/" target="_blank" rel="noreferrer">
+          <Image
+            className="rounded-br-3xl rounded-tl-3xl object-cover sm:min-h-[20rem]"
+            src={solve}
+            placeholder="blur"
+            alt="solve screenshot"
+          />
+        </a>
+      </DoublePane>
       <DoublePane
         header="Roster Staffing"
         headerTextSize="text-xl sm:text-3xl lg:text-4xl"
@@ -164,21 +167,20 @@ export const ProjectPane = (props: Props) => {
         descTextWeight="font-bold"
         headerTextColor="text-emerald-300"
         descTextColor="text-gray-200"
-        content={
-          <a href="https://rosterstaffing.ca/" target="_blank" rel="noreferrer">
-            <Image
-              className="object-cover rounded-tl-3xl rounded-br-3xl sm:min-h-[20rem]"
-              src={roster}
-              placeholder="blur"
-              alt="roster screenshot"
-            />
-          </a>
-        }
         tagText="Next.js, TypeScript, Resend, Figma"
         margin=""
         padding="py-10"
         textContentPadding="pb-6 md:pb-0"
-      />
-    </section>
+      >
+        <a href="https://rosterstaffing.ca/" target="_blank" rel="noreferrer">
+          <Image
+            className="rounded-br-3xl rounded-tl-3xl object-cover sm:min-h-[20rem]"
+            src={roster}
+            placeholder="blur"
+            alt="roster screenshot"
+          />
+        </a>
+      </DoublePane>
+    </>
   )
 }

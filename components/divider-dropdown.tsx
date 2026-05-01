@@ -13,6 +13,7 @@ type DividerDropDownProps = {
   bottomGradientTo?: string
   expandHeight: string
   children: ReactNode
+  showDefault?: boolean
 }
 
 export const DividerDropdown = ({
@@ -25,8 +26,9 @@ export const DividerDropdown = ({
   bottomGradientTo,
   expandHeight,
   children,
+  showDefault = false,
 }: DividerDropDownProps) => {
-  const [show, setShow] = useState(false)
+  const [show, setShow] = useState(showDefault)
 
   return (
     <>
