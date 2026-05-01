@@ -29,7 +29,7 @@ export const ProjectsDoublePane = ({
         className="flex size-full"
       >
         <Image
-          className="size-full rounded-bl-3xl rounded-tr-3xl object-contain sm:min-h-[20rem]"
+          className="size-full rounded-tr-3xl rounded-bl-3xl object-contain sm:min-h-80"
           src={imgSrc}
           placeholder="blur"
           alt="bulltrout screenshot"

@@ -34,17 +34,17 @@ export const DividerDropdown = ({
     <>
       {topGradientFrom && topGradientTo && (
         <div
-          className={`w-5/6 h-1 my-4 bg-gradient-to-r ${topGradientFrom} ${topGradientTo}`}
+          className={`my-4 h-1 w-5/6 bg-linear-to-r ${topGradientFrom} ${topGradientTo}`}
         />
       )}
       <div className="flex w-full items-center justify-center gap-4">
         <h2
-          className={`flex text-3xl font-bold text-transparent mb-1 bg-clip-text bg-gradient-to-r ${headerGradientFrom} ${headerGradientTo}`}
+          className={`mb-1 flex bg-linear-to-r bg-clip-text text-3xl font-bold text-transparent ${headerGradientFrom} ${headerGradientTo}`}
         >
           {header}
         </h2>
         <IoChevronForwardOutline
-          className={`flex size-8 rounded-full ring-2 ring-teal-200 hover:animate-pulse transition-all duration-300 cursor-pointer ${
+          className={`flex size-8 cursor-pointer rounded-full ring-2 ring-teal-200 transition-all duration-300 hover:animate-pulse ${
             show ? 'rotate-90' : 'rotate-0'
           }`}
           onClick={() => setShow(!show)}
@@ -52,13 +52,13 @@ export const DividerDropdown = ({
       </div>
       {bottomGradientFrom && bottomGradientTo && (
         <div
-          className={`w-5/6 h-1 my-4 bg-gradient-to-r ${bottomGradientFrom} ${bottomGradientTo}`}
+          className={`my-4 h-1 w-5/6 bg-linear-to-r ${bottomGradientFrom} ${bottomGradientTo}`}
         />
       )}
       <div
         className={`${
-          show ? `${expandHeight} my-4 opacity-100` : 'h-0 my-0 opacity-0'
-        } overflow-hidden w-5/6 transition-all duration-500`}
+          show ? `${expandHeight} my-4 opacity-100` : 'my-0 h-0 opacity-0'
+        } w-5/6 overflow-hidden transition-all duration-500`}
       >
         {children}
       </div>

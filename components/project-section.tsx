@@ -1,13 +1,13 @@
 import { DoublePane } from './double-pane'
 import Image from 'next/image'
-import retrain from '../../public/retrain.png'
-import authrequest from '../../public/authrequest.png'
-import areqapp from '../../public/areqapp.webp'
-import academics from '../../public/academics.png'
-import solve from '../../public/s01ve.png'
-import scan from '../../public/scan.png'
-import roster from '../../public/roster.png'
-import bulltrout from '../../public/bulltrout.png'
+import retrain from '../public/retrain.png'
+import authrequest from '../public/authrequest.png'
+import areqapp from '../public/areqapp.webp'
+import academics from '../public/academics.png'
+import solve from '../public/s01ve.png'
+import scan from '../public/scan.png'
+import roster from '../public/roster.png'
+import bulltrout from '../public/bulltrout.png'
 import { ProjectsDoublePane } from './projects-double-pane'
 
 export const ProjectSection = () => {
@@ -36,7 +36,7 @@ export const ProjectSection = () => {
       >
         <a href="https://retraincanada.com/" target="_blank" rel="noreferrer">
           <Image
-            className="rounded-br-3xl rounded-tl-3xl object-cover sm:min-h-[20rem]"
+            className="rounded-tl-3xl rounded-br-3xl object-cover sm:min-h-80"
             src={retrain}
             placeholder="blur"
             alt="retrain screenshot"
@@ -62,7 +62,7 @@ export const ProjectSection = () => {
           rel="noreferrer"
         >
           <Image
-            className="h-[30rem] w-fit rounded-bl-3xl rounded-tr-3xl object-contain"
+            className="h-120 w-fit rounded-tr-3xl rounded-bl-3xl object-contain"
             src={areqapp}
             placeholder="blur"
             alt="authrequest screenshot"
@@ -84,7 +84,7 @@ export const ProjectSection = () => {
       >
         <a href="https://www.s01ve.io/scan" target="_blank" rel="noreferrer">
           <Image
-            className="rounded-bl-3xl rounded-tr-3xl object-cover sm:min-h-[20rem]"
+            className="rounded-tr-3xl rounded-bl-3xl object-cover sm:min-h-80"
             src={scan}
             placeholder="blur"
             alt="authrequest screenshot"
@@ -106,7 +106,7 @@ export const ProjectSection = () => {
       >
         <a href="https://authrequest.io/" target="_blank" rel="noreferrer">
           <Image
-            className="rounded-bl-3xl rounded-tr-3xl object-cover sm:min-h-[20rem]"
+            className="rounded-tr-3xl rounded-bl-3xl object-cover sm:min-h-80"
             src={authrequest}
             placeholder="blur"
             alt="authrequest screenshot"
@@ -131,7 +131,7 @@ export const ProjectSection = () => {
           rel="noreferrer"
         >
           <Image
-            className="rounded-br-3xl rounded-tl-3xl object-cover sm:min-h-[20rem]"
+            className="rounded-tl-3xl rounded-br-3xl object-cover sm:min-h-80"
             src={academics}
             placeholder="blur"
             alt="retrain academics screenshot"
@@ -153,7 +153,7 @@ export const ProjectSection = () => {
       >
         <a href="https://s01ve.io/" target="_blank" rel="noreferrer">
           <Image
-            className="rounded-br-3xl rounded-tl-3xl object-cover sm:min-h-[20rem]"
+            className="rounded-tl-3xl rounded-br-3xl object-cover sm:min-h-80"
             src={solve}
             placeholder="blur"
             alt="solve screenshot"
@@ -174,7 +174,7 @@ export const ProjectSection = () => {
       >
         <a href="https://rosterstaffing.ca/" target="_blank" rel="noreferrer">
           <Image
-            className="rounded-br-3xl rounded-tl-3xl object-cover sm:min-h-[20rem]"
+            className="rounded-tl-3xl rounded-br-3xl object-cover sm:min-h-80"
             src={roster}
             placeholder="blur"
             alt="roster screenshot"

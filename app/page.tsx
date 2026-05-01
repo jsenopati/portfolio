@@ -6,11 +6,11 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center bg-neutral-900 text-gray-300">
       <div className="my-16 flex w-5/6 flex-col items-center rounded-2xl bg-zinc-800 py-16">
-        <h1 className="flex w-5/6 justify-center bg-gradient-to-r from-emerald-500 to-blue-300 bg-clip-text text-4xl font-bold text-transparent">
+        <h1 className="flex w-5/6 justify-center bg-linear-to-r from-emerald-500 to-blue-300 bg-clip-text text-4xl font-bold text-transparent">
           Hello, I&apos;m Julien.
           <span className="animate-bounce text-white">👋</span>
         </h1>
-        <div className="my-4 h-1 w-5/6 bg-gradient-to-r from-blue-300 to-emerald-500" />
+        <div className="my-4 h-1 w-5/6 bg-linear-to-r from-blue-300 to-emerald-500" />
         <div className="flex w-5/6 flex-col items-center">
           <div className="my-4 flex w-full flex-row justify-center gap-12">
             <div className="">
@@ -98,7 +98,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="my-4 h-1 w-5/6 bg-gradient-to-r from-purple-300 to-pink-300" />
+        <div className="my-4 h-1 w-5/6 bg-linear-to-r from-purple-300 to-pink-300" />
         <DividerDropdown
           showDefault={true}
           header="About Me"
@@ -113,7 +113,7 @@ export default function Home() {
               <a
                 href="https://www.s01ve.io/"
                 target="_blank"
-                className="rounded-md bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text font-bold text-transparent ring-0 ring-teal-200 transition-all hover:animate-pulse hover:ring-2"
+                className="rounded-md bg-linear-to-r from-pink-300 to-purple-300 bg-clip-text font-bold text-transparent ring-0 ring-teal-200 transition-all hover:animate-pulse hover:ring-2"
               >
                 s01ve Cyber Solutions
               </a>{' '}
@@ -125,7 +125,7 @@ export default function Home() {
               <a
                 href="https://treemansion.com/"
                 target="_blank"
-                className="rounded-md bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text font-bold text-transparent ring-0 ring-teal-200 transition-all hover:animate-pulse hover:ring-2"
+                className="rounded-md bg-linear-to-r from-pink-300 to-purple-300 bg-clip-text font-bold text-transparent ring-0 ring-teal-200 transition-all hover:animate-pulse hover:ring-2"
               >
                 Treemansion.com
               </a>{' '}
