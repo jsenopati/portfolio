@@ -51,7 +51,7 @@ export const Win7Window = ({
     >
       <div
         ref={nodeRef}
-        className={`window${isActive ? 'active' : ''}`}
+        className={isActive ? 'window active' : 'window'}
         style={{ position: 'absolute', display: 'inline-block', zIndex }}
       >
         <div className="title-bar" style={{ cursor: 'grab' }}>
