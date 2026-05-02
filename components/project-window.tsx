@@ -102,7 +102,7 @@ type Props = {
   defaultY?: number
 }
 
-export const ProjectSection = ({ defaultX = 20, defaultY = 20 }: Props) => {
+export const ProjectWindow = ({ defaultX = 20, defaultY = 20 }: Props) => {
   const [selectedId, setSelectedId] = useState(projects[0].id)
   const project = projects.find((p) => p.id === selectedId)!
 
@@ -143,7 +143,7 @@ export const ProjectSection = ({ defaultX = 20, defaultY = 20 }: Props) => {
                     tabIndex={0}
                     onClick={() => setSelectedId(p.id)}
                     onKeyDown={(e) => e.key === 'Enter' && setSelectedId(p.id)}
-                    className="cursor-pointer px-1 py-0.5"
+                    className="cursor-pointer px-1 py-1"
                   >
                     📁 {p.name}
                   </li>
