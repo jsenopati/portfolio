@@ -1,0 +1,91 @@
+import { IoLogoApple, IoLogoWindows } from 'react-icons/io5'
+import { Win7Window } from './win7-window'
+
+type AboutWindowProps = {
+  defaultX?: number
+  defaultY?: number
+}
+
+export const AboutWindow = ({ defaultX, defaultY }: AboutWindowProps) => {
+  return (
+    <Win7Window
+      title="about.txt - Notepad"
+      defaultX={defaultX}
+      defaultY={defaultY}
+    >
+      <div className="window-body">
+        <ul role="menubar">
+          <li role="menuitem" tabIndex={0}>
+            File
+          </li>
+          <li role="menuitem" tabIndex={0}>
+            Edit
+          </li>
+          <li role="menuitem" tabIndex={0}>
+            Format
+          </li>
+          <li role="menuitem" tabIndex={0}>
+            View
+          </li>
+          <li role="menuitem" tabIndex={0}>
+            Help
+          </li>
+        </ul>
+        <div
+          style={{
+            background: 'white',
+            padding: '4px 8px',
+            fontFamily: '"Courier New", monospace',
+            fontSize: '13px',
+            lineHeight: 1.6,
+            width: 400,
+            overflowY: 'auto',
+          }}
+        >
+          <div className="flex flex-col gap-3">
+            <p>
+              I&apos;m a full stack developer / UI designer / frontend lead /
+              app support specialist at{' '}
+              <a
+                href="https://www.s01ve.io/"
+                target="_blank"
+                rel="noreferrer"
+                style={{ color: '#0055e5', fontWeight: 'bold' }}
+              >
+                s01ve Cyber Solutions
+              </a>{' '}
+              💻🔐, an MSSP company where I get to wear a lot of hats 🎩 and
+              work on a variety of projects.
+            </p>
+            <p>
+              I also do web dev for{' '}
+              <a
+                href="https://treemansion.com/"
+                target="_blank"
+                rel="noreferrer"
+                style={{ color: '#0055e5', fontWeight: 'bold' }}
+              >
+                Treemansion.com
+              </a>{' '}
+              🏠🌴, an e-commerce platform and community for all things AI art
+              🖼, working primarily with Next.js and TypeScript.
+            </p>
+            <p>
+              Throughout my time in the ITSD👨‍💻 program at SAIT🏫, as well as
+              before and after, I worked as a Windows
+              <IoLogoWindows className="mb-1 ml-0.5 inline" /> and Apple
+              <IoLogoApple className="mb-1 ml-0.5 inline" /> technician,
+              resolving hardware and software issues for clients across a wide
+              range of devices 📱.
+            </p>
+            <p>
+              Right now, my interests are Go, Svelte, a tiny bit of gamedev, and
+              forever missing the way Windows 7 looked.
+            </p>
+          </div>
+        </div>
+      </div>
+    </Win7Window>
+  )
+}
+
