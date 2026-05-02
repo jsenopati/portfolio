@@ -7,11 +7,7 @@ type HeroWindowProps = {
 
 export const HeroWindow = ({ defaultX, defaultY }: HeroWindowProps) => {
   return (
-    <Win7Window
-      title="Julien Senopati — Portfolio"
-      defaultX={defaultX}
-      defaultY={defaultY}
-    >
+    <Win7Window title="hello.exe" defaultX={defaultX} defaultY={defaultY}>
       <div className="window-body">
         <div className="flex w-96 flex-col items-center gap-4 bg-gray-900 py-4">
           <h1 className="flex items-center gap-2 bg-linear-to-r from-emerald-500 to-blue-300 bg-clip-text text-4xl font-bold text-transparent">

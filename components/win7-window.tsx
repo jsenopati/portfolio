@@ -1,7 +1,10 @@
 'use client'
 
 import Draggable from 'react-draggable'
-import { useRef, type ReactNode } from 'react'
+import { useEffect, useRef, useState, type ReactNode } from 'react'
+
+let zCounter = 1
+const allSetActive = new Set<(v: boolean) => void>()
 
 type Win7WindowProps = {
   title: string
@@ -17,6 +20,27 @@ export const Win7Window = ({
   defaultY = 20,
 }: Win7WindowProps) => {
   const nodeRef = useRef<HTMLDivElement>(null)
+  const [zIndex, setZIndex] = useState(1)
+  const [isActive, setIsActive] = useState(false)
+
+  useEffect(() => {
+    allSetActive.add(setIsActive)
+    return () => {
+      allSetActive.delete(setIsActive)
+    }
+  }, [])
+
+  useEffect(() => {
+    const el = nodeRef.current
+    if (!el) return
+    const raise = () => {
+      setZIndex(++zCounter)
+      allSetActive.forEach((s) => s(false))
+      setIsActive(true)
+    }
+    el.addEventListener('mousedown', raise)
+    return () => el.removeEventListener('mousedown', raise)
+  }, [])
 
   return (
     <Draggable
@@ -27,8 +51,8 @@ export const Win7Window = ({
     >
       <div
         ref={nodeRef}
-        className="window"
-        style={{ position: 'absolute', display: 'inline-block' }}
+        className={`window${isActive ? 'active' : ''}`}
+        style={{ position: 'absolute', display: 'inline-block', zIndex }}
       >
         <div className="title-bar" style={{ cursor: 'grab' }}>
           <div className="title-bar-text">{title}</div>

@@ -11,14 +11,10 @@ body {
 .desktop {
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(
-    180deg,
-    #1a6aa8 0%,
-    #3a9bd5 30%,
-    #5cb8e8 55%,
-    #a8d8f0 75%,
-    #c8e8f8 100%
-  );
+  background-image: url('/wp.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   position: relative;
   overflow: hidden;
   display: flex;

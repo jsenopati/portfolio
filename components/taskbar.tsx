@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
 export const Taskbar = () => {
@@ -30,62 +31,24 @@ export const Taskbar = () => {
   }, [])
 
   return (
-    <div
-      style={{
-        height: '40px',
-        background: 'rgba(30, 90, 160, 0.55)',
-        backdropFilter: 'blur(12px)',
-        WebkitBackdropFilter: 'blur(12px)',
-        borderTop: '1px solid rgba(255,255,255,0.25)',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        padding: '0 4px',
-        flexShrink: 0,
-        boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.2)',
-      }}
-    >
+    <div className="flex h-10 shrink-0 items-center justify-between border-t-white/25 bg-[rgba(66,96,129,0.21)] pl-1 shadow-[inset_0_1px_0_rgba(255,255,255,0.2)] backdrop-blur-xs">
       {/* Start button */}
-      <button
-        style={{
-          height: '36px',
-          padding: 0,
-          background: 'none',
-          border: 'none',
-          cursor: 'pointer',
-          display: 'flex',
-          alignItems: 'center',
-        }}
-      >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/start.png"
-          alt="Start"
-          style={{ height: '36px', width: 'auto' }}
-        />
-      </button>
+
+      <Image
+        src="/start.png"
+        width="40"
+        height="40"
+        alt="Start"
+        className="h-10"
+      />
 
       {/* Clock */}
-      <div
-        style={{
-          height: '34px',
-          padding: '0 10px',
-          background: 'rgba(255,255,255,0.1)',
-          border: '1px solid rgba(255,255,255,0.15)',
-          borderRadius: '2px',
-          color: 'white',
-          fontSize: '12px',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          lineHeight: 1.3,
-          textShadow: '0 1px 1px rgba(0,0,0,0.4)',
-          minWidth: '72px',
-        }}
-      >
-        <span style={{ fontWeight: 600 }}>{time}</span>
-        <span style={{ opacity: 0.85 }}>{date}</span>
+      <div className="flex items-center">
+        <div className="flex min-w-18 flex-col items-center justify-center text-xs leading-[1.3] text-white [text-shadow:0_1px_1px_rgba(0,0,0,0.4)]">
+          <span>{time}</span>
+          <span>{date}</span>
+        </div>
+        <div className="h-10 w-2.5 border border-t-0 border-white/25" />
       </div>
     </div>
   )

@@ -44,8 +44,8 @@ export const AboutWindow = ({ defaultX, defaultY }: AboutWindowProps) => {
         >
           <div className="flex flex-col gap-3">
             <p>
-              I&apos;m a full stack developer / UI designer / support specialist
-              at{' '}
+              I&apos;m a full stack developer / UI designer / frontend lead /
+              app support specialist at{' '}
               <a
                 href="https://www.s01ve.io/"
                 target="_blank"
@@ -79,8 +79,8 @@ export const AboutWindow = ({ defaultX, defaultY }: AboutWindowProps) => {
               range of devices 📱.
             </p>
             <p>
-              Right now, my interests are Go, React, and honing my design skills
-              with Figma 🎨.
+              Right now, my interests are Go, Svelte, a tiny bit of gamedev, and
+              forever missing the way Windows 7 looked.
             </p>
           </div>
         </div>
